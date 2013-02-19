@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="row">
+    <div class="span3">
+      <%= render "partials/user_sidebar" %>
+    </div>
+    <div class="span9"></div>
+  </div>
+</div>
+
+<table>
+  <tr>
+    <th>Date</th>
+    <th>Spent</th>
+    <th>Saved</th>
+  </tr>
+  <% for transaction in @transactions %>
+    <tr>
+      <td><%= transaction.date %></td>
+      <td><%= transaction.spent %></td>
+      <td><%= transaction.saved %></td>
+      <td><%= link_to "Show", transaction %></td>
+      <td><%= link_to "Edit", edit_transaction_path(transaction) %></td>
+      <td><%= link_to "Destroy", transaction, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Transaction", new_transaction_path %></p>
