@@ -24,6 +24,7 @@ end
 gem 'jquery-rails'
 
 gem 'omniauth-facebook'
+gem 'omniauth-identity'
 
 gem "nifty-generators", :group => :development
 
@@ -31,7 +32,7 @@ gem 'better_errors', group: :development
 
 
 # To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
+gem 'bcrypt-ruby', '~> 3.0.0'
 
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'
