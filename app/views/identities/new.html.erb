@@ -1,29 +1,40 @@
-<h1>New Account</h1>
+<div class="container">
+	<h1>New Account</h1>
+	
+	
+	<%= form_tag "/auth/identity/register" do %>
+		
 
-<%= form_tag "/auth/identity/register" do %>
-	<% if @identity && @identity.errors.any? %>
-		<div class="error_messages">
-			<h2><%= pluralize(@identity.errors.count, "error") %> prohibited this account from being saved:</h2>
-			<ul>
-				<% @identity.errors.full_messages.each do |msg| %>
-					<li><%= msg %></li>
-				<% end %>
-			</ul>
+		
+		<% if @identity && @identity.errors.any? %>
+			<div class="alert alert-error">
+			<div class="error_messages">
+				<h2><%= pluralize(@identity.errors.count, "error") %> prohibited this account from being saved:</h2>
+				<ul>
+					<% @identity.errors.full_messages.each do |msg| %>
+						<li><%= msg %></li>
+					<% end %>
+				</ul>
+			</div>
+			</div>
+		<% end %>
+		
+		
+
+		<div>
+			<%= text_field_tag :name, @identity.try(:name), placeholder: "Name" %>
+		</div>
+		<div>
+			<%= text_field_tag :email, @identity.try(:email), placeholer: "Email" %>
+		</div>	
+		<div>
+			<%= password_field_tag :password, nil, placeholer: "Password" %>
+		</div>
+		<div>
+			<%= password_field_tag :password_confirmation, nil, placeholder: "Confirm Email" %>
+		</div>
+		<div>
+			<%= submit_tag "Register", class: "btn btn-primary" %>
 		</div>
 	<% end %>
-	<div>
-		<%= text_field_tag :name, @identity.try(:name) %>
-	</div>
-	<div>
-		<%= text_field_tag :email, @identity.try(:email) %>
-	</div>	
-	<div>
-		<%= password_field_tag :password %>
-	</div>
-	<div>
-		<%= password_field_tag :password_confirmation %>
-	</div>
-	<div>
-		<%= submit_tag "Register" %>
-	</div>
-<% end %>
+</div>

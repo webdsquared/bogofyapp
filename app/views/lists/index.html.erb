@@ -7,7 +7,7 @@
       <h2>Lists</h2>
       <p><%= link_to "New List", new_list_path %></p>
       <% for list in @lists %>
-        <%= list.name %>
+        <h2><%= list.name %></h2>
 
         <%= form_for([list, list.items.build], html: { class: "form-inline" } ) do |f| %>
         <%= f.text_field :name, placeholder: "Add an item..." %>

@@ -1,7 +1,41 @@
+<head>
+	<div class="navbar black navbar-inverse">
+		<div class="container">
+		<div class="row">
+			<div class="span3">
+				<a class="brand" href="#">Bogofy</a>
+			</div>
+			<div class="span9 pull-right">
+				<ul class="nav pull-right">
+					<li><%= link_to "How it Works", "#" %></li>
+					<li><%= link_to "Features", "#" %></li>
+					<li><%= link_to "Get Started Now", '#' %></li>
+					<li><%= link_to "Login", '#' %></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	</div>
+	
+</head>
 
 
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="container">
+
+<!--h1 class="center-text bogofy">Bogofy</h1-->
+
+
+
+
+
+<h1>Bogofy</h1>
+<p></p>
+
+<br>
+<br>
+<br>
+
+
 
 <p>
   <%= link_to "Create an account", new_identity_path %> or
@@ -18,7 +52,7 @@
 			<%= password_field_tag :password, nil, placeholder: "Password" %>
 		</div>
 		<div>
-			<%= submit_tag "Log In" %>
+			<%= submit_tag "Log In", class: "btn btn-primary" %>
 		</div>
 	<% end %>
 </div>
@@ -34,3 +68,5 @@
     <%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in" %>
   <% end %>
 </div>
+</div>
+
