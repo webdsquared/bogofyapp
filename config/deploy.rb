@@ -10,7 +10,7 @@ set :use_sudo, false
 set :port, 22
 
 set :scm, "git"
-set :repository, "git@github.com:webdsquared/#{application}.git"
+set :repository, "https://github.com/webdsquared/#{application}.git"
 set :branch, "master"
 
 
