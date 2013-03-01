@@ -3,7 +3,7 @@ require "bundler/capistrano"
 server "198.211.99.130", :web, :app, :db, primary: true
 
 set :application, "bogofyapp"
-set :user, "aaron"
+set :user, "root"
 set :deploy_to, "/home/#{user}/#{application}"
 set :deploy_via, :remote_cache
 set :use_sudo, false
