@@ -3,10 +3,11 @@ require "bundler/capistrano"
 server "198.211.99.130", :web, :app, :db, primary: true
 
 set :application, "bogofyapp"
-set :user, "root"
+set :user, "aaron"
 set :deploy_to, "/home/#{user}/#{application}"
 set :deploy_via, :remote_cache
 set :use_sudo, false
+set :port, 22
 
 set :scm, "git"
 set :repository, "git@github.com:webdsquared/#{application}.git"
