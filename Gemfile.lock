@@ -134,6 +134,8 @@ GEM
     rake (10.0.3)
     rdoc (3.12)
       json (~> 1.4)
+    rvm-capistrano (1.2.7)
+      capistrano (>= 2.0.0)
     sass (3.2.5)
     sass-rails (3.2.6)
       railties (~> 3.2.0)
@@ -176,6 +178,8 @@ DEPENDENCIES
   omniauth-identity
   pg
   rails (= 3.2.9)
+  rvm-capistrano
   sass-rails (~> 3.2.3)
+  therubyracer
   twitter-bootstrap-rails
   uglifier (>= 1.0.3)

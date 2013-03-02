@@ -7,7 +7,6 @@ set :user, "deployer"
 set :deploy_to, "/home/#{user}/#{application}"
 set :deploy_via, :remote_cache
 set :use_sudo, false
-set :port, 22
 
 set :scm, "git"
 set :repository, "https://github.com/webdsquared/#{application}.git"

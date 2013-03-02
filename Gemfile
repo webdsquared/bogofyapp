@@ -19,6 +19,7 @@ group :assets do
 
   gem 'uglifier', '>= 1.0.3'
   gem 'twitter-bootstrap-rails'
+  gem 'therubyracer'
 end
 
 gem 'jquery-rails'
@@ -42,6 +43,7 @@ gem 'bcrypt-ruby', '~> 3.0.0'
 
 # Deploy with Capistrano
 gem 'capistrano'
+gem 'rvm-capistrano'
 
 # To use debugger
 # gem 'debugger'
@@ -49,3 +51,4 @@ gem 'capistrano'
 gem "mocha", :group => :test
 
 gem 'pg'
+
