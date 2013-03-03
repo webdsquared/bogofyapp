@@ -11,7 +11,7 @@ set :use_sudo, false
 set :scm, "git"
 set :repository, "https://github.com/webdsquared/#{application}.git"
 set :branch, "master"
-
+set :rvm_bin_path, '/usr/local/rvm/bin'
 
 default_run_options[:pty] = true
 ssh_options[:forward_agent] = true
