@@ -1,3 +1,6 @@
+#set :bundle_cmd, "/usr/local/rvm/gems/ruby-1.9.3-p392@global"
+#set :bundle_dir, "/usr/local/rvm/gems/ruby-1.9.3-p392"
+
 require "bundler/capistrano"
 
 server "198.211.99.130", :web, :app, :db, primary: true
@@ -11,9 +14,7 @@ set :use_sudo, false
 set :scm, "git"
 set :repository, "https://github.com/webdsquared/#{application}.git"
 set :branch, "master"
-set :default_environment, {
-  'PATH' => "/opt/ruby-enterprise/bin/:$PATH"
-}
+
 
 default_run_options[:pty] = true
 ssh_options[:forward_agent] = true

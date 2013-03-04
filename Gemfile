@@ -29,7 +29,7 @@ gem 'omniauth-identity'
 
 gem "nifty-generators", :group => :development
 
-gem 'better_errors', group: :development
+#gem 'better_errors', group: :development
 
 
 # To use ActiveModel has_secure_password
