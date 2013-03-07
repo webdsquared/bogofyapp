@@ -24,11 +24,11 @@ test:
   password:
   host: localhost
 
-#production:
-#  adapter: postgresql
-#  database: bogofyapp_production
-#  pool: 5
-#  timeout: 5000
-#  encoding: unicode
-#  username: bogofyapp
-#  password: h0lein0ne
+production:
+  adapter: postgresql
+  database: bogofyapp_production
+  pool: 5
+  timeout: 5000
+  encoding: unicode
+  username: bogofyapp
+  password: h0lein0ne
