@@ -3,7 +3,7 @@
 
 require "bundler/capistrano"
 
-server "198.211.99.130", :web, :app, :db, primary: true
+server "192.81.219.54", :web, :app, :db, primary: true
 
 set :application, "bogofyapp"
 set :user, "aaron"
